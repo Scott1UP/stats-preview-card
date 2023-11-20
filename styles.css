@@ -13,10 +13,16 @@ figure, blockquote, dl, dd {
 }
 
 body {
-    font-size: 15px;
-    font-family: 'Inter';
-    margin: 5.5rem 1.5rem;
-    background: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  margin: 0 1.5rem;
+  font-size: 15px;
+  font-family: 'Inter';
+  background: var(--main-bg);
 }
 
 h2 {
@@ -34,9 +40,9 @@ h2 {
 }
 
 .img-holder {
-  background-color: var(--accent);
+  width: 100%;
   height: 240px;
-  overflow: hidden;
+  background-color: var(--accent);
 }
 
 img {
@@ -90,4 +96,50 @@ img {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+@media (min-width: 640px){
+  .card {
+    flex-direction: row-reverse;
+    max-width: 1112px;
+    height: auto;
+  }
+
+  img {
+    content: url(./images/image-header-desktop.jpg);
+    height: 100%;
+    max-width: 540px;
+  }
+
+  .img-holder {
+    height: auto;
+  }
+
+  h2 {
+    font-size: 38px;
+    color: var(--mh-and-stats);
+  }
+
+  .content {
+    padding: 4rem;
+    gap: 1.5rem;
+    text-align: left;
+  }
+
+  .body {
+    padding-bottom: 3rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--main-p);
+    width: 90%;
+  }
+
+  .stats {
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .stat-item {
+    gap: 8px;
+  }
 }
